@@ -6,3 +6,7 @@ class Employee(models.Model):
 
 class Division(models.Model):
     div_name = models.CharField(max_length=25)
+    in_scope = models.BooleanField(help_text='If the division is target for the learning program, check this field')
+
+    def __str__(self):
+        return f'{self.id}-{self.div_name}'

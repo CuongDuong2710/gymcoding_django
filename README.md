@@ -3,6 +3,13 @@
 
 ## Command
 
+Create virtual environment
+```sh```
+py -m venv [ven_name]
+source [ven_name]/bin/active (for Mac)
+source [ven_name]\Scripts\Activate.ps1 (for Windows)
+```sh```
+
 Run server
 ```sh```
 py manage.py runserver
