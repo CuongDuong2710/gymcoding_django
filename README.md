@@ -14,7 +14,6 @@ py manage.py migrate
 ```sh```
 
 Create Superuser and Log in to Django Admin
-
 ```sh```
 py manage.py createsuperuser
 ```sh```
