@@ -3,7 +3,7 @@
 
 ## Command
 
-Create and active virtual environment
+Create and active virtual environment. Remember active for running any command
 ```sh```
 py -m venv [ven_name]
 source [ven_name]/bin/active (for Mac)
@@ -17,6 +17,7 @@ py manage.py runserver
 
 Database Migration
 ```sh```
+py manage.py makemigrations [app_name]
 py manage.py migrate
 ```sh```
 
@@ -41,4 +42,23 @@ Then register Models in Django Admin - admin.py
 
 ```sh```
 admin.site.register(models_name)
+```sh```
+
+- config/urls.py is defined urlpatterns to route app
+
+Example
+
+```sh```
+(dj_env) PS D:\gymcoding\gymcoding_django> py manage.py makemigrations employee_learning
+Migrations for 'employee_learning':
+  employee_learning\migrations\0005_employee_reg_date.py
+    - Add field reg_date to employee
+
+(dj_env) PS D:\gymcoding\gymcoding_django> py manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, employee_learning, sessions
+Running migrations:
+  Applying employee_learning.0005_employee_reg_date... OK
+
+  ... and check on http://127.0.0.1:8000/admin/employee_learning/employee/
 ```sh```
