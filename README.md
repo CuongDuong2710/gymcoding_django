@@ -3,7 +3,7 @@
 
 ## Command
 
-Create virtual environment
+Create and active virtual environment
 ```sh```
 py -m venv [ven_name]
 source [ven_name]/bin/active (for Mac)
