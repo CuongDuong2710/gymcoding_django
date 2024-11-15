@@ -19,3 +19,7 @@ class Employee(models.Model):
     def __str__(self):
         return self.name
 
+class PersonalInfo(models.Model):
+    name = models.OneToOneField(Employee, on_delete=models.CASCADE, primary_key=True)
+    tel = models.CharField(max_length=15)
+    address = models.CharField(max_length=50)
