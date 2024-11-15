@@ -62,3 +62,14 @@ Running migrations:
 
   ... and check on http://127.0.0.1:8000/admin/employee_learning/employee/
 ```sh```
+
+Foreign Key (OneToMany Relationship)
+
+```sh```
+models.ForeignKey(RelatedModel, on_delete=xx)
+```sh```
+
+Three possible values for `on_delete` argument:
+- CASCADE: deletes the obbject containing the ForeignKey
+- PROTECT: prevents deletion of the referenced object by raising ProtectedError
+- RESTRICT: prevents deletion of the referenced object by raising RestrictedError
